@@ -1,7 +1,6 @@
 {
   "name": "c3-gui-cyto",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.0.1",
   "license": "GPL-3.0+",
   "dependencies": {
     "autoprefixer": "7.1.1",
