@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="WebpackDev" type="js.build_tools.npm" factoryName="npm">
+    <package-json value="$PROJECT_DIR$/package.json" />
+    <command value="start" />
+    <node-interpreter value="project" />
+    <envs>
+      <env name="BROWSER" value="none" />
+    </envs>
+    <method />
+  </configuration>
+</component>
