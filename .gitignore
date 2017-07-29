@@ -27,6 +27,7 @@ yarn-error.log*
 .idea/dictionaries
 
 !.idea/runConfigurations/
+.idea/**/*.iml
 
 ## File-based project format:
 *.iws
