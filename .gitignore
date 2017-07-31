@@ -26,9 +26,9 @@ yarn-error.log*
 .idea/**/tasks.xml
 .idea/**/*Tasks.xml
 .idea/dictionaries
+.idea/**/modules.xml
 
 # WebStorm's configs
-*.iml
 !.idea/runConfigurations/
 .idea/**/*.iml
 
