@@ -7,6 +7,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Contributors
 Check the `CONTRIBUTORS.md` file for more details.
 
+* Prof. Dr. Cleomar de Sousa Rocha
 * Prof. Dr. Hugo Alexandre Dantas do Nascimento
 * Gabriela Aimée Guimarães
 * Yuri Matheus Dias Pereira
