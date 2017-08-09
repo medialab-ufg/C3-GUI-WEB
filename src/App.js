@@ -42,6 +42,7 @@ class App extends Component {
         <NavItem>Salvar</NavItem>
         <NavItem>Configurações</NavItem>
         <NavItem>Gerais</NavItem>
+        import $ from 'jquery';
       </Dropdown>
     );
   }
