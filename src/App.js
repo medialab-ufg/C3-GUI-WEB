@@ -5,21 +5,29 @@ import { Dropdown, Button, NavItem, Navbar, Icon } from 'react-materialize';
 
 class App extends Component {
   renderNavbar() {
+    let menuItens = [
+      this.renderMenuFile(),
+      this.renderMenuOptions(),
+      this.renderMenuTools(),
+      this.renderMenuHelp()
+    ].map((item, index) =>
+      <NavItem key={index}>
+        {item}
+      </NavItem>
+    );
     return (
       <Navbar left className="blue-grey lighten-2">
-        <NavItem>
-          {this.renderMenuFile()}
-        </NavItem>
-        <NavItem>
-          {this.renderMenuOptions()}
-        </NavItem>
-        <NavItem>
-          {this.renderMenuTools()}
-        </NavItem>
-        <NavItem>
-          {this.renderMenuHelp()}
-        </NavItem>
+        {menuItens}
       </Navbar>
+    );
+  }
+
+  static createNavItens(itens) {
+    let names = itens || [];
+    return names.map((item, index) =>
+      <NavItem key={index}>
+        {item}
+      </NavItem>
     );
   }
 
@@ -36,13 +44,13 @@ class App extends Component {
         }
         options={test}
       >
-        <NavItem>Novo</NavItem>
-        <NavItem>Importar</NavItem>
-        <NavItem>Exportar</NavItem>
-        <NavItem>Salvar</NavItem>
-        <NavItem>Configurações</NavItem>
-        <NavItem>Gerais</NavItem>
-        import $ from 'jquery';
+        {App.createNavItens([
+          'Novo',
+          'Importar',
+          'Exportar',
+          'Salvar',
+          'Configurações Gerais'
+        ])}
       </Dropdown>
     );
   }
@@ -56,8 +64,7 @@ class App extends Component {
           </Button>
         }
       >
-        <NavItem>Undo</NavItem>
-        <NavItem>Redo</NavItem>
+        {App.createNavItens(['Undo', 'Redo'])}
       </Dropdown>
     );
   }
@@ -71,7 +78,7 @@ class App extends Component {
           </Button>
         }
       >
-        <NavItem>Gerar código</NavItem>
+        {App.createNavItens(['Gerar código'])}
       </Dropdown>
     );
   }
@@ -85,8 +92,7 @@ class App extends Component {
           </Button>
         }
       >
-        <NavItem>Preferências</NavItem>
-        <NavItem>Sobre o C³-GUI</NavItem>
+        {App.createNavItens(['Preferências', 'Sobre o C³-GUI'])}
       </Dropdown>
     );
   }
