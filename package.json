@@ -105,5 +105,9 @@
       "prettier --single-quote --write",
       "git add"
     ]
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^2.3.0",
+    "eslint-plugin-prettier": "^2.1.2"
   }
 }

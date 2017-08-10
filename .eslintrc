@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "react-app"
+  ],
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+  },
+  "plugins": [
+    "react",
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": ["error", "fb"]
+  }
+}
