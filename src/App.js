@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import './App.css';
 
-import { Dropdown, Button, NavItem, Navbar, Icon } from 'react-materialize';
+import {Dropdown, Button, NavItem, Navbar, Icon} from 'react-materialize';
 
 class App extends Component {
   renderNavbar() {
@@ -9,11 +9,11 @@ class App extends Component {
       this.renderMenuFile(),
       this.renderMenuOptions(),
       this.renderMenuTools(),
-      this.renderMenuHelp()
+      this.renderMenuHelp(),
     ].map((item, index) =>
       <NavItem key={index}>
         {item}
-      </NavItem>
+      </NavItem>,
     );
     return (
       <Navbar left className="blue-grey lighten-2">
@@ -27,13 +27,13 @@ class App extends Component {
     return names.map((item, index) =>
       <NavItem key={index}>
         {item}
-      </NavItem>
+      </NavItem>,
     );
   }
 
   renderMenuFile() {
     let test = {
-      belowOrigin: true
+      belowOrigin: true,
     };
     return (
       <Dropdown
@@ -42,14 +42,13 @@ class App extends Component {
             Arquivo<Icon right>arrow_drop_down</Icon>
           </Button>
         }
-        options={test}
-      >
+        options={test}>
         {App.createNavItens([
           'Novo',
           'Importar',
           'Exportar',
           'Salvar',
-          'Configurações Gerais'
+          'Configurações Gerais',
         ])}
       </Dropdown>
     );
@@ -62,8 +61,7 @@ class App extends Component {
           <Button>
             Editar<Icon right>arrow_drop_down</Icon>
           </Button>
-        }
-      >
+        }>
         {App.createNavItens(['Undo', 'Redo'])}
       </Dropdown>
     );
@@ -76,8 +74,7 @@ class App extends Component {
           <Button>
             Ferramentas<Icon right>arrow_drop_down</Icon>
           </Button>
-        }
-      >
+        }>
         {App.createNavItens(['Gerar código'])}
       </Dropdown>
     );
@@ -90,8 +87,7 @@ class App extends Component {
           <Button>
             Ajuda<Icon right>arrow_drop_down</Icon>
           </Button>
-        }
-      >
+        }>
         {App.createNavItens(['Preferências', 'Sobre o C³-GUI'])}
       </Dropdown>
     );
