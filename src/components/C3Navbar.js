@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {NavItem, Navbar} from 'react-materialize';
+import {Navbar} from 'react-materialize';
 import MenuDropdown from './MenuDropdown';
 
 class C3Navbar extends React.Component {
@@ -37,9 +37,9 @@ class C3Navbar extends React.Component {
       this.renderMenuTools(),
       this.renderMenuHelp(),
     ].map((item, index) =>
-      <NavItem key={index}>
+      <li key={index}>
         {item}
-      </NavItem>,
+      </li>,
     );
     return (
       <Navbar brand="C³-GUI" left className="blue-grey lighten-2">

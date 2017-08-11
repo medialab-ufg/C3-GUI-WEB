@@ -14,19 +14,14 @@ class MenuDropdown extends React.Component {
   }
 
   render() {
-    let options = {
-      belowOrigin: true,
-    };
     let navbarItems = this.createNavItems(this.props.navbarItems);
     return (
       <Dropdown
         trigger={
-          <Button waves="light">
-            {this.props.menuName}
-            <Icon right>arrow_drop_down</Icon>
+          <Button waves="light" data-beloworigin="true" data-gutter="1">
+            {this.props.menuName} <Icon>arrow_drop_down</Icon>
           </Button>
-        }
-        options={options}>
+        }>
         {navbarItems}
       </Dropdown>
     );
@@ -34,8 +29,8 @@ class MenuDropdown extends React.Component {
 }
 
 MenuDropdown.propTypes = {
-  menuName: PropTypes.string,
-  navbarItems: PropTypes.array,
+  menuName: PropTypes.string.isRequired,
+  navbarItems: PropTypes.array.isRequired,
 };
 
 export default MenuDropdown;
