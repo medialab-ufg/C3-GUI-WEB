@@ -5,6 +5,7 @@
   "engines": {
     "node": ">=6.11.0"
   },
+  "homepage": "https://medialab-ufg.github.io/C3-GUI",
   "dependencies": {
     "autoprefixer": "7.1.1",
     "babel-core": "6.25.0",
@@ -27,19 +28,23 @@
     "extract-text-webpack-plugin": "2.1.2",
     "file-loader": "0.11.2",
     "fs-extra": "3.0.1",
+    "gh-pages": "^1.0.0",
     "html-webpack-plugin": "2.29.0",
     "husky": "^0.14.3",
     "jest": "20.0.4",
+    "jquery": "^3.2.1",
     "lint-staged": "^4.0.2",
     "object-assign": "4.1.1",
     "postcss-flexbugs-fixes": "3.0.0",
     "postcss-loader": "2.0.6",
     "prettier": "^1.5.3",
     "promise": "7.1.1",
+    "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dev-utils": "^3.0.2",
     "react-dom": "^15.6.1",
     "react-error-overlay": "^1.0.9",
+    "react-materialize": "^1.0.6",
     "style-loader": "0.18.2",
     "sw-precache-webpack-plugin": "0.11.3",
     "url-loader": "0.5.9",
@@ -49,6 +54,8 @@
     "whatwg-fetch": "2.0.3"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "precommit": "lint-staged",
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
@@ -59,7 +66,8 @@
       "src/**/*.{js,jsx}"
     ],
     "setupFiles": [
-      "<rootDir>/config/polyfills.js"
+      "<rootDir>/config/polyfills.js",
+      "<rootDir>/test/jest-globals.js"
     ],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.js?(x)",
@@ -96,8 +104,12 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx,json,css}": [
-      "prettier --single-quote --write",
+      "eslint --fix",
       "git add"
     ]
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^2.3.0",
+    "eslint-plugin-prettier": "^2.1.2"
   }
 }
